@@ -1,0 +1,279 @@
+.cart-count {
+  width: 1rem;
+  height: 1rem;
+  background-color: #1f1d2b;
+  color: white;
+  border-radius: 2rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-div {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Home header */
+.home-container {
+  width: 1350px;
+  height: 64rem;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+  background-color: #252836;
+  display: flex;
+}
+
+/* Menu icon */
+
+.home-icon {
+  background: #1f1d2b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.home-icon-home {
+  width: 6rem;
+  height: 6rem;
+  background: #252836;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-home {
+  width: 3.375rem;
+  height: 3.375rem;
+  background: #ea7c69;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  box-shadow: 0px 8px 24px 0px #ea7c6952;
+}
+
+.home {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.home-button {
+  background: #1f1d2b;
+  border: 1px solid #1f1d2b;
+  cursor: pointer;
+}
+
+.home-icon__market {
+  display: flex;
+}
+
+.home-icon__market button {
+  display: flex;
+  background: #1f1d2b;
+  border: 1px solid #1f1d2b;
+}
+
+/*  */
+
+.home-discreption {
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+/* Home header */
+
+.home-header {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.home-header__icon {
+  position: absolute;
+  right: 20rem;
+}
+
+.home-resto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 11.75rem;
+  height: 4.5rem;
+}
+
+.home-resto__name {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.home-resto__date {
+  font-size: 1rem;
+  color: #e0e6e9;
+  font-weight: 400;
+}
+
+.home-search {
+  width: 23rem;
+  height: 3.4rem;
+}
+
+.home-search__text {
+  padding-left: 5rem;
+  font-size: 1rem;
+  width: 100%;
+  height: 100%;
+  background: #393c49;
+  border: 2rem;
+  border-radius: 0.5rem;
+}
+
+/* Home navigation */
+
+.home-navigation {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.home-navigation-items {
+  width: 100%;
+  height: 2.2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+#hot {
+  color: #ea7c69;
+}
+
+.home-navigation__text {
+  font-size: 1.12rem;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+}
+
+.home-navigation__lines {
+  height: 2px;
+  margin: 0 auto;
+  background-color: #393c49;
+}
+
+.home-navigation__line_dishes {
+  width: 12rem;
+  height: 0.18rem;
+  border-radius: 0.4rem;
+  background: #ea7c69;
+}
+
+/*  */
+
+.home-navigation__choose {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.home-navigation__icon {
+  position: absolute;
+  right: 9rem;
+}
+
+.home-navigation__prise {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.home-navigation__prise__text {
+  width: 11.6rem;
+  height: 3.3rem;
+  font-size: 1.25rem;
+  border: 0.1rem solid #ffff;
+  background: #1f1d2b;
+  display: flex;
+  border-radius: 0.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Home section */
+
+.home-section {
+  width: 68rem;
+  height: 42rem;
+  margin-top: 2.5rem;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.home-items {
+  width: 100%;
+  height: 27.5rem;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-item {
+  margin: 0.7rem;
+  text-align: center;
+}
+
+.home-item__details {
+  padding-top: 7rem;
+  width: 15.6rem;
+  height: 21.5rem;
+  border-radius: 1.2rem;
+  background: #1f1d2b;
+}
+
+.home-item__img {
+  width: 12rem;
+  height: 12rem;
+  margin-bottom: -90px;
+}
+
+.home-item__name {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.home-item__price {
+  padding: 0.8rem;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.home-item__bowls {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #abbbc2;
+}
+
+.home-item__button {
+  width: 11.25rem;
+  height: 2.875rem;
+  margin-top: 2.5rem;
+  font-size: 1.25rem;
+  color: #ffffff;
+  background: #ea7c69;
+  border-radius: 0.5rem;
+  border: 1px solid #ea7c69;
+}

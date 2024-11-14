@@ -1,0 +1,114 @@
+.market-Container {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+}
+
+.market-container {
+  width: 1350px;
+  height: 64rem;
+  margin: 0 auto;
+  z-index: 2;
+  position: absolute;
+  background: url("../assets/Market-Overlay.png");
+  display: flex;
+  justify-content: space-between;
+}
+
+.market-icons {
+  background: #1f1d2b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.market-icon {
+  width: 6rem;
+  height: 6rem;
+  background: #252836;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-right: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.market-icon__img {
+  width: 3.375rem;
+  height: 3.375rem;
+  background: #ea7c69;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  box-shadow: 0px 8px 24px 0px #ea7c6952;
+}
+
+.market {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Market orders */
+
+.market_order {
+  width: 31rem;
+  background: rgba(37, 40, 54, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Market header */
+
+.market-header {
+  padding: 4rem;
+  width: 100%;
+}
+
+.market-header__text {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Market section */
+
+.market-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.market-item__img {
+  width: 23rem;
+  height: 23rem;
+  margin: 0 0 2rem 0;
+}
+
+.market-item__title {
+  margin: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
+}
+
+.market-item__date {
+  font-size: 1rem;
+  color: rgba(224, 230, 233, 1);
+}
+
+.market-item__button {
+  width: 27.5rem;
+  height: 3rem;
+  font-size: 1.125rem;
+  color: rgba(250, 250, 250, 1);
+  background: rgba(234, 124, 105, 1);
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(234, 124, 105, 1);
+  box-shadow: 0px 8px 24px 0px rgba(234, 124, 105, 0.3);
+}
