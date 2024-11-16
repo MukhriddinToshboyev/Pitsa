@@ -11,19 +11,12 @@ import HomeIcon8 from "../assets/icons8_account.png";
 
 import OrdersIcon1 from "../assets/Orders-icons8_left_48px 1.svg";
 import OrdersIcon2 from "../assets/Orders-Button.svg";
-import { useState } from "react";
 
-function Orders({ cartItems1 }) {
-  const [cart, setCard] = useState(1);
-
-  function onClickPlus() {
-    setCard(cart + 1);
-  }
-
-  function onClickMinus() {
-    setCard(cart - 1);
-  }
-
+function Orders({
+  handleQuantityDecrement,
+  handleQuantityIncrement,
+  cartItems1,
+}) {
   return (
     <div className="orders-container">
       <div className="orders-icons">
@@ -62,7 +55,7 @@ function Orders({ cartItems1 }) {
         </header>
         <section className="orders-section">
           <div className="orders-items">
-            {cartItems1.map((food) => (
+            {cartItems1?.map((food) => (
               <div key={food.id} className="orders-item">
                 <div className="orders-section__img">
                   <div>
@@ -73,17 +66,14 @@ function Orders({ cartItems1 }) {
                     />
                     <div className="orders-section__number">
                       <button
-                        onClick={onClickMinus}
+                        onClick={() => handleQuantityDecrement(food)}
                         className="orders-section__button"
                       >
                         -
                       </button>
-                      <span className="orders-cart">
-                        {" "}
-                        {cart > 0 ? cart : 0}
-                      </span>
+                      <span className="orders-cart">{food.quantity}</span>
                       <button
-                        onClick={onClickPlus}
+                        onClick={() => handleQuantityIncrement(food)}
                         className="orders-section__button"
                       >
                         +
@@ -93,7 +83,9 @@ function Orders({ cartItems1 }) {
                   <div className="orders-item__details">
                     <h1 className="orders-item__name">{food.name}</h1>
                     <p className="orders-item__price">$ {food.price}</p>
-                    <p className="orders-item__price">$ {food.price * cart}</p>
+                    <p className="orders-item__price">
+                      $ {food.price * food.quantity}
+                    </p>
                   </div>
                 </div>
 

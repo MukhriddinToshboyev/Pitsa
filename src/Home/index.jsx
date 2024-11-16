@@ -79,12 +79,25 @@ const foods = [
   },
 ];
 
-function Home({ addToCart, cartItems, cartItems1, handleClick, caunt }) {
+function Home({
+  handleAddToCart,
+  cartLength,
+  cartItems1,
+  handleQuantityDecrement,
+  handleQuantityIncrement,
+  handleHSHowCart,
+  showCart,
+}) {
   return (
     <div className="container-div">
       <div className="home-container">
-        {/* {caunt && <Market />} */}
-        {caunt > 0 && <Orders cartItems1={cartItems1} />}
+        {showCart && (
+          <Orders
+            handleQuantityDecrement={handleQuantityDecrement}
+            handleQuantityIncrement={handleQuantityIncrement}
+            cartItems1={cartItems1}
+          />
+        )}
 
         <div className="home-icon">
           <img src={HomeIcon1} alt="img" className="home" />
@@ -98,11 +111,10 @@ function Home({ addToCart, cartItems, cartItems1, handleClick, caunt }) {
           <img src={HomeIcon5} alt="img" className="home" />
           <img src={HomeIcon6} alt="img" className="home" />
           <div className="home-icon__market">
-            <button onClick={handleClick}>
+            <button onClick={handleHSHowCart}>
               <img src={HomeIcon7} alt="img" className="home" />
             </button>
-
-            {cartItems > 0 && <span className="cart-count">{cartItems}</span>}
+            {cartLength > 0 && <span className="cart-count">{cartLength}</span>}
           </div>
           <img src={HomeIcon8} alt="img" className="home" />
         </div>
@@ -167,7 +179,7 @@ function Home({ addToCart, cartItems, cartItems1, handleClick, caunt }) {
                       {food.bowls} Bowls available
                     </p>
                     <button
-                      onClick={() => addToCart(food)}
+                      onClick={() => handleAddToCart(food)}
                       className="home-item__button"
                     >
                       Add
