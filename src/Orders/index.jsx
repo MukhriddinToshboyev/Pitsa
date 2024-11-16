@@ -11,12 +11,23 @@ import HomeIcon8 from "../assets/icons8_account.png";
 
 import OrdersIcon1 from "../assets/Orders-icons8_left_48px 1.svg";
 import OrdersIcon2 from "../assets/Orders-Button.svg";
+import { useEffect, useState } from "react";
 
 function Orders({
   handleQuantityDecrement,
   handleQuantityIncrement,
   cartItems1,
 }) {
+  const [subTotal, setSubTotal] = useState(0);
+
+  useEffect(() => {
+    const total = cartItems1.reduce(
+      (acc, item) => acc + item.price * item.quantity,
+      0
+    );
+    setSubTotal(total);
+  }, [cartItems1]);
+
   return (
     <div className="orders-container">
       <div className="orders-icons">
@@ -112,7 +123,7 @@ function Orders({
               </div>
               <div className="orders-section__dis">
                 <h1 className="discaunt_text">Sub total</h1>
-                <p className="discaunt_number">$ 21.03</p>
+                <p className="discaunt_number">$ {subTotal.toFixed(2)}</p>
               </div>
             </div>
           </div>
