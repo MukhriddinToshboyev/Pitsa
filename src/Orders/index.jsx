@@ -28,26 +28,10 @@ function Orders({
       0
     );
     setSubTotal(total);
-    // cartItems1 ni localStorage ga saqlash
-    localStorage.setItem("cartItems", JSON.stringify(cartItems1));
   }, [cartItems1]);
 
   return (
     <div className="orders-container">
-      <div className="orders-icons">
-        <img src={HomeIcon1} alt="img" className="orders" />
-        <img src={HomeIcon2} alt="img" className="orders" />
-        <img src={HomeIcon3} alt="img" className="orders" />
-        <img src={HomeIcon4} alt="img" className="orders" />
-        <img src={HomeIcon5} alt="img" className="orders" />
-        <img src={HomeIcon6} alt="img" className="orders" />
-        <div className="orders-icon">
-          <div className="orders-icon__img">
-            <img src={HomeIcon7} alt="img" className="orders" />
-          </div>
-        </div>
-        <img src={HomeIcon8} alt="img" className="orders" />
-      </div>
       <div className="orders-payment">
         <header className="orders-header">
           <div className="orders-header__number">

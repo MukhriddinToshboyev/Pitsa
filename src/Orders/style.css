@@ -6,7 +6,7 @@
   position: absolute;
   background: url("../assets/Market-Overlay.png");
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .orders-icons {

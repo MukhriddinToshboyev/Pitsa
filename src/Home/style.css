@@ -16,7 +16,7 @@
 
 /* Home header */
 .home-container {
-  width: 1350px;
+  width: 100%;
   height: 64rem;
   margin: 0 auto;
   z-index: 1;
@@ -162,7 +162,9 @@
   color: #ffffff;
   font-weight: 600;
   text-decoration: none;
-  display: flex;
+  border-bottom: 3px solid gray;
+  flex: 1;
+  text-align: center;
 }
 
 .home-navigation__lines {
@@ -204,10 +206,15 @@
   color: #ffffff;
 }
 
+.active {
+  color: #ea7c69;
+  border-color: #ea7c69;
+}
+
 /* Home section */
 
 .home-section {
-  width: 68rem;
+  width: 100%;
   height: 42rem;
   margin-top: 2.5rem;
   overflow: auto;

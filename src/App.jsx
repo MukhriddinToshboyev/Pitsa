@@ -6,7 +6,9 @@ function App() {
   const [cart, setCart] = useState([]);
 
   function handleAddToCart(item) {
-    setCart([...cart, { ...item, quantity: 1 }]);
+    const newData = [...cart, { ...item, quantity: 1 }];
+    setCart(newData);
+    localStorage.setItem("cart", JSON.stringify(newData));
   }
 
   const handleQuantityIncrement = (obj) => {

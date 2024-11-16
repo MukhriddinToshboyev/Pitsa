@@ -86,6 +86,8 @@ function Home({
   handleQuantityDecrement,
   handleQuantityIncrement,
 }) {
+  const [activeTitle, setActiveTitle] = useState("hot-dishes");
+
   const [showCart, setShowCart] = useState(false);
 
   const handleHSHowCart = () => {
@@ -145,18 +147,56 @@ function Home({
           </header>
           <nav className="home-navigation">
             <div className="home-navigation-items">
-              <h1 className="home-navigation__text" id="hot">
+              <h1
+                onClick={() => setActiveTitle("hot-dishes")}
+                className={`home-navigation__text ${
+                  activeTitle === "hot-dishes" ? "active" : ""
+                }`}
+              >
                 Hot Dishes
               </h1>
-              <h1 className="home-navigation__text">Cold Dishes</h1>
-              <h1 className="home-navigation__text">Soup</h1>
-              <h1 className="home-navigation__text">Grill</h1>
-              <h1 className="home-navigation__text">Appetizer</h1>
-              <h1 className="home-navigation__text">Dessert</h1>
+              <h1
+                onClick={() => setActiveTitle("cold-dishes")}
+                className={`home-navigation__text ${
+                  activeTitle === "cold-dishes" ? "active" : ""
+                }`}
+              >
+                Cold Dishes
+              </h1>
+              <h1
+                onClick={() => setActiveTitle("soup")}
+                className={`home-navigation__text ${
+                  activeTitle === "soup" ? "active" : ""
+                }`}
+              >
+                Soup
+              </h1>
+              <h1
+                onClick={() => setActiveTitle("grill")}
+                className={`home-navigation__text ${
+                  activeTitle === "grill" ? "active" : ""
+                }`}
+              >
+                Grill
+              </h1>
+              <h1
+                onClick={() => setActiveTitle("appetizer")}
+                className={`home-navigation__text ${
+                  activeTitle === "appetizer" ? "active" : ""
+                }`}
+              >
+                Appetizer
+              </h1>
+              <h1
+                onClick={() => setActiveTitle("dessert")}
+                className={`home-navigation__text ${
+                  activeTitle === "dessert" ? "active" : ""
+                }`}
+              >
+                Dessert
+              </h1>
             </div>
-            <div className="home-navigation__lines">
-              <p className="home-navigation__line_dishes"></p>
-            </div>
+
             <div className="home-navigation__choose">
               <p className="home-navigation__prise">Choose Dishes</p>
 
