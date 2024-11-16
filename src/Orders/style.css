@@ -54,6 +54,12 @@
   flex-direction: column;
 }
 
+.handleLogaut {
+  background: #252836;
+  border: 1px solid #252836;
+  cursor: pointer;
+}
+
 /* orders header */
 
 .orders-header {
@@ -145,9 +151,6 @@
 
 .orders-section__input {
   width: 27rem;
-}
-
-.orders-items {
 }
 
 .orders-item {

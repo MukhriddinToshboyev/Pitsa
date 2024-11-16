@@ -17,6 +17,7 @@ function Orders({
   handleQuantityDecrement,
   handleQuantityIncrement,
   cartItems1,
+  handleLogaut,
 }) {
   const [subTotal, setSubTotal] = useState(0);
 
@@ -47,7 +48,13 @@ function Orders({
       <div className="orders-payment">
         <header className="orders-header">
           <div className="orders-header__number">
-            <img src={OrdersIcon1} alt="icon" className="orders-header__icon" />
+            <button onClick={handleLogaut} className="handleLogaut">
+              <img
+                src={OrdersIcon1}
+                alt="icon"
+                className="orders-header__icon"
+              />
+            </button>
             <h1 className="orders-header__text">Orders #34562</h1>
           </div>
           <div className="orders-header__title">

@@ -4,14 +4,10 @@ import Home from "./Home";
 
 function App() {
   const [cart, setCart] = useState([]);
-  const [showCart, setShowCart] = useState(false);
 
   function handleAddToCart(item) {
     setCart([...cart, { ...item, quantity: 1 }]);
   }
-  const handleHSHowCart = () => {
-    setShowCart(true);
-  };
 
   const handleQuantityIncrement = (obj) => {
     if (obj.quantity === 10) {
@@ -48,8 +44,6 @@ function App() {
           cartItems1={cart}
           handleQuantityDecrement={handleQuantityDecrement}
           handleQuantityIncrement={handleQuantityIncrement}
-          handleHSHowCart={handleHSHowCart}
-          showCart={showCart}
         />
       </div>
     </>

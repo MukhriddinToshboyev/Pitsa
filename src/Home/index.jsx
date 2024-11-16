@@ -85,14 +85,21 @@ function Home({
   cartItems1,
   handleQuantityDecrement,
   handleQuantityIncrement,
-  handleHSHowCart,
-  showCart,
 }) {
+  const [showCart, setShowCart] = useState(false);
+
+  const handleHSHowCart = () => {
+    setShowCart(true);
+  };
+  const handleLogaut = () => {
+    setShowCart(false);
+  };
   return (
     <div className="container-div">
       <div className="home-container">
         {showCart && (
           <Orders
+            handleLogaut={handleLogaut}
             handleQuantityDecrement={handleQuantityDecrement}
             handleQuantityIncrement={handleQuantityIncrement}
             cartItems1={cartItems1}
@@ -151,9 +158,6 @@ function Home({
               <p className="home-navigation__line_dishes"></p>
             </div>
             <div className="home-navigation__choose">
-              <div className="home-navigation__icon">
-                <img src={HomeIcon10} alt="icon" />
-              </div>
               <p className="home-navigation__prise">Choose Dishes</p>
 
               <select
