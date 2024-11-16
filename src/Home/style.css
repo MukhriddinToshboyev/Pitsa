@@ -16,7 +16,7 @@
 
 /* Home header */
 .home-container {
-  width: 100%;
+  width: 1350px;
   height: 64rem;
   margin: 0 auto;
   z-index: 1;
@@ -177,8 +177,6 @@
   border-radius: 0.4rem;
   background: #ea7c69;
 }
-
-/*  */
 
 .home-navigation__choose {
   padding-top: 2rem;

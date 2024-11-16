@@ -22,11 +22,14 @@ function Orders({
   const [subTotal, setSubTotal] = useState(0);
 
   useEffect(() => {
+    // Sub total ni hisoblash
     const total = cartItems1.reduce(
       (acc, item) => acc + item.price * item.quantity,
       0
     );
     setSubTotal(total);
+    // cartItems1 ni localStorage ga saqlash
+    localStorage.setItem("cartItems", JSON.stringify(cartItems1));
   }, [cartItems1]);
 
   return (
