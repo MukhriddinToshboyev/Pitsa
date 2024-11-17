@@ -9,10 +9,6 @@
   align-items: center;
   justify-content: center;
 }
-.container-div {
-  width: 100%;
-  margin: 0 auto;
-}
 
 /* Home header */
 .home-container {
@@ -28,6 +24,7 @@
 /* Menu icon */
 
 .home-icon {
+  width: 6.25rem;
   background: #1f1d2b;
   display: flex;
   flex-direction: column;
@@ -81,9 +78,9 @@
 /*  */
 
 .home-discreption {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 2rem;
 }
 
 /* Home header */
@@ -223,10 +220,10 @@
 
 .home-items {
   width: 100%;
-  height: 27.5rem;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .home-item {

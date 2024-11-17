@@ -15,7 +15,6 @@ import HomeIcon7 from "../assets/icons7-cart-outline.png";
 import HomeIcon8 from "../assets/icons8_account.png";
 
 import HomeIcon9 from "../assets/Market-icons8_search_50px 1 (2).svg";
-import HomeIcon10 from "../assets/Market-icons8_expand_arrow_96px 1.svg";
 import Orders from "../Orders";
 import { useState } from "react";
 import Market from "../Market";
@@ -80,6 +79,7 @@ const foods = [
 ];
 
 function Home({
+  handleDeleteFromCart,
   handleAddToCart,
   cartLength,
   cartItems1,
@@ -91,149 +91,148 @@ function Home({
   const [showCart, setShowCart] = useState(false);
 
   const handleHSHowCart = () => {
-    setShowCart(true);
+    setShowCart(!showCart);
   };
   const handleLogaut = () => {
     setShowCart(false);
   };
   return (
-    <div className="container-div">
-      <div className="home-container">
-        {showCart && (
-          <Orders
-            handleLogaut={handleLogaut}
-            handleQuantityDecrement={handleQuantityDecrement}
-            handleQuantityIncrement={handleQuantityIncrement}
-            cartItems1={cartItems1}
-          />
-        )}
+    <div className="home-container">
+      {showCart && (
+        <Orders
+          handleDeleteFromCart={handleDeleteFromCart}
+          handleLogaut={handleLogaut}
+          handleQuantityDecrement={handleQuantityDecrement}
+          handleQuantityIncrement={handleQuantityIncrement}
+          cartItems1={cartItems1}
+        />
+      )}
 
-        <div className="home-icon">
-          <img src={HomeIcon1} alt="img" className="home" />
-          <div className="home-icon-home">
-            <div className="icon-home">
-              <img src={HomeIcon2} alt="img" className="home" />
-            </div>
+      <div className="home-icon">
+        <img src={HomeIcon1} alt="img" className="home" />
+        <div className="home-icon-home">
+          <div className="icon-home">
+            <img src={HomeIcon2} alt="img" className="home" />
           </div>
-          <img src={HomeIcon3} alt="img" className="home" />
-          <img src={HomeIcon4} alt="img" className="home" />
-          <img src={HomeIcon5} alt="img" className="home" />
-          <img src={HomeIcon6} alt="img" className="home" />
-          <div className="home-icon__market">
-            <button onClick={handleHSHowCart}>
-              <img src={HomeIcon7} alt="img" className="home" />
-            </button>
-            {cartLength > 0 && <span className="cart-count">{cartLength}</span>}
-          </div>
-          <img src={HomeIcon8} alt="img" className="home" />
         </div>
+        <img src={HomeIcon3} alt="img" className="home" />
+        <img src={HomeIcon4} alt="img" className="home" />
+        <img src={HomeIcon5} alt="img" className="home" />
+        <img src={HomeIcon6} alt="img" className="home" />
+        <div className="home-icon__market">
+          <button onClick={handleHSHowCart}>
+            <img src={HomeIcon7} alt="img" className="home" />
+          </button>
+          {cartLength > 0 && <span className="cart-count">{cartLength}</span>}
+        </div>
+        <img src={HomeIcon8} alt="img" className="home" />
+      </div>
 
-        <div className="home-discreption">
-          <header className="home-header">
-            <div className="home-header__icon">
-              <img src={HomeIcon9} alt="icon" />
-            </div>
-            <div className="home-resto">
-              <h1 className="home-resto__name">Jaegar Resto</h1>
-              <p className="home-resto__date">Tuesday, 2 Feb 2021</p>
-            </div>
-            <form className="home-search">
-              <input
-                className="home-search__text"
-                tabIndex={Text}
-                placeholder="Search for food, coffe, etc.."
-              />
-            </form>
-          </header>
-          <nav className="home-navigation">
-            <div className="home-navigation-items">
-              <h1
-                onClick={() => setActiveTitle("hot-dishes")}
-                className={`home-navigation__text ${
-                  activeTitle === "hot-dishes" ? "active" : ""
-                }`}
-              >
-                Hot Dishes
-              </h1>
-              <h1
-                onClick={() => setActiveTitle("cold-dishes")}
-                className={`home-navigation__text ${
-                  activeTitle === "cold-dishes" ? "active" : ""
-                }`}
-              >
-                Cold Dishes
-              </h1>
-              <h1
-                onClick={() => setActiveTitle("soup")}
-                className={`home-navigation__text ${
-                  activeTitle === "soup" ? "active" : ""
-                }`}
-              >
-                Soup
-              </h1>
-              <h1
-                onClick={() => setActiveTitle("grill")}
-                className={`home-navigation__text ${
-                  activeTitle === "grill" ? "active" : ""
-                }`}
-              >
-                Grill
-              </h1>
-              <h1
-                onClick={() => setActiveTitle("appetizer")}
-                className={`home-navigation__text ${
-                  activeTitle === "appetizer" ? "active" : ""
-                }`}
-              >
-                Appetizer
-              </h1>
-              <h1
-                onClick={() => setActiveTitle("dessert")}
-                className={`home-navigation__text ${
-                  activeTitle === "dessert" ? "active" : ""
-                }`}
-              >
-                Dessert
-              </h1>
-            </div>
+      <div className="home-discreption">
+        <header className="home-header">
+          <div className="home-header__icon">
+            <img src={HomeIcon9} alt="icon" />
+          </div>
+          <div className="home-resto">
+            <h1 className="home-resto__name">Jaegar Resto</h1>
+            <p className="home-resto__date">Tuesday, 2 Feb 2021</p>
+          </div>
+          <form className="home-search">
+            <input
+              className="home-search__text"
+              tabIndex={Text}
+              placeholder="Search for food, coffe, etc.."
+            />
+          </form>
+        </header>
+        <nav className="home-navigation">
+          <div className="home-navigation-items">
+            <h1
+              onClick={() => setActiveTitle("hot-dishes")}
+              className={`home-navigation__text ${
+                activeTitle === "hot-dishes" ? "active" : ""
+              }`}
+            >
+              Hot Dishes
+            </h1>
+            <h1
+              onClick={() => setActiveTitle("cold-dishes")}
+              className={`home-navigation__text ${
+                activeTitle === "cold-dishes" ? "active" : ""
+              }`}
+            >
+              Cold Dishes
+            </h1>
+            <h1
+              onClick={() => setActiveTitle("soup")}
+              className={`home-navigation__text ${
+                activeTitle === "soup" ? "active" : ""
+              }`}
+            >
+              Soup
+            </h1>
+            <h1
+              onClick={() => setActiveTitle("grill")}
+              className={`home-navigation__text ${
+                activeTitle === "grill" ? "active" : ""
+              }`}
+            >
+              Grill
+            </h1>
+            <h1
+              onClick={() => setActiveTitle("appetizer")}
+              className={`home-navigation__text ${
+                activeTitle === "appetizer" ? "active" : ""
+              }`}
+            >
+              Appetizer
+            </h1>
+            <h1
+              onClick={() => setActiveTitle("dessert")}
+              className={`home-navigation__text ${
+                activeTitle === "dessert" ? "active" : ""
+              }`}
+            >
+              Dessert
+            </h1>
+          </div>
 
-            <div className="home-navigation__choose">
-              <p className="home-navigation__prise">Choose Dishes</p>
+          <div className="home-navigation__choose">
+            <p className="home-navigation__prise">Choose Dishes</p>
 
-              <select
-                className="home-navigation__prise__text"
-                id="country"
-                name="country"
-              >
-                <option value="australia">Price</option>
-                <option value="canada">Name</option>
-                <option value="usa">Prise</option>
-              </select>
-            </div>
-          </nav>
-          <section className="home-section">
-            <div className="home-items">
-              {foods.map((food) => (
-                <div key={food.id} className="home-item">
-                  <img src={food.image} alt="img" className="home-item__img" />
-                  <div className="home-item__details">
-                    <h1 className="home-item__name">{food.name}</h1>
-                    <p className="home-item__price">${food.price}</p>
-                    <p className="home-item__bowls">
-                      {food.bowls} Bowls available
-                    </p>
-                    <button
-                      onClick={() => handleAddToCart(food)}
-                      className="home-item__button"
-                    >
-                      Add
-                    </button>
-                  </div>
+            <select
+              className="home-navigation__prise__text"
+              id="country"
+              name="country"
+            >
+              <option value="australia">Price</option>
+              <option value="canada">Name</option>
+              <option value="usa">Prise</option>
+            </select>
+          </div>
+        </nav>
+        <section className="home-section">
+          <div className="home-items">
+            {foods.map((food) => (
+              <div key={food.id} className="home-item">
+                <img src={food.image} alt="img" className="home-item__img" />
+                <div className="home-item__details">
+                  <h1 className="home-item__name">{food.name}</h1>
+                  <p className="home-item__price">${food.price}</p>
+                  <p className="home-item__bowls">
+                    {food.bowls} Bowls available
+                  </p>
+                  <button
+                    onClick={() => handleAddToCart(food)}
+                    className="home-item__button"
+                  >
+                    Add
+                  </button>
                 </div>
-              ))}
-            </div>
-          </section>
-        </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );
