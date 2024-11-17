@@ -12,6 +12,7 @@
 /* card card */
 
 .card-orders {
+  transition: right 10s ease;
   width: 31rem;
   background: rgba(37, 40, 54, 1);
   display: flex;

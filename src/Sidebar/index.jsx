@@ -8,7 +8,6 @@ import SidebarIcon5 from "../assets/icons5-Message.png";
 import SidebarIcon6 from "../assets/isons6-Notification.png";
 import SidebarIcon7 from "../assets/icons7-cart-outline.png";
 import SidebarIcon8 from "../assets/icons8_account.png";
-import { useState } from "react";
 
 function Sidebar({ handleHSHowCart, cartLength }) {
   return (
