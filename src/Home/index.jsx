@@ -5,20 +5,11 @@ import HomeImage2 from "../assets/Home-Images2.png";
 import HomeImage3 from "../assets/Home-Images3.png";
 import HomeImage4 from "../assets/Home-Images4.png";
 
-import HomeIcon1 from "../assets/icons1_Menu.png";
-import HomeIcon2 from "../assets/icons2-Home.png";
-import HomeIcon3 from "../assets/icons3-Discount.png";
-import HomeIcon4 from "../assets/icons4-Graph.png";
-import HomeIcon5 from "../assets/icons5-Message.png";
-import HomeIcon6 from "../assets/isons6-Notification.png";
-import HomeIcon7 from "../assets/icons7-cart-outline.png";
-import HomeIcon8 from "../assets/icons8_account.png";
-
-import HomeIcon9 from "../assets/Market-icons8_search_50px 1 (2).svg";
+import HomeIcon1 from "../assets/Market-icons8_search_50px 1 (2).svg";
 
 import { useState } from "react";
-import Market from "../Market";
 import Card from "../Card";
+import Sidebar from "../Sidebar";
 
 const foods = [
   {
@@ -109,30 +100,12 @@ function Home({
         />
       )}
 
-      <div className="home-icon">
-        <img src={HomeIcon1} alt="img" className="home" />
-        <div className="home-icon-home">
-          <div className="icon-home">
-            <img src={HomeIcon2} alt="img" className="home" />
-          </div>
-        </div>
-        <img src={HomeIcon3} alt="img" className="home" />
-        <img src={HomeIcon4} alt="img" className="home" />
-        <img src={HomeIcon5} alt="img" className="home" />
-        <img src={HomeIcon6} alt="img" className="home" />
-        <div className="home-icon__market">
-          <button onClick={handleHSHowCart}>
-            <img src={HomeIcon7} alt="img" className="home" />
-          </button>
-          {cartLength > 0 && <span className="cart-count">{cartLength}</span>}
-        </div>
-        <img src={HomeIcon8} alt="img" className="home" />
-      </div>
+      <Sidebar cartLength={cartLength} handleHSHowCart={handleHSHowCart} />
 
       <div className="home-discreption">
         <header className="home-header">
           <div className="home-header__icon">
-            <img src={HomeIcon9} alt="icon" />
+            <img src={HomeIcon1} alt="icon" />
           </div>
           <div className="home-resto">
             <h1 className="home-resto__name">Jaegar Resto</h1>
