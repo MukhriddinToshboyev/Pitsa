@@ -4,6 +4,7 @@ import CardIcon1 from "../assets/Card-icons8_left_48px 1.svg";
 import CardIcon2 from "../assets/Card-Button.svg";
 import { useEffect, useState } from "react";
 import Market from "../Market";
+import Payment from "../Payment";
 
 function Card({
   handleDeleteFromCart,
@@ -120,7 +121,7 @@ function Card({
           </footer>
         </div>
       ) : (
-        <Market />
+        <Payment />
       )}
     </div>
   );
