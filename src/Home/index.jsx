@@ -15,9 +15,10 @@ import HomeIcon7 from "../assets/icons7-cart-outline.png";
 import HomeIcon8 from "../assets/icons8_account.png";
 
 import HomeIcon9 from "../assets/Market-icons8_search_50px 1 (2).svg";
-import Orders from "../Orders";
+
 import { useState } from "react";
 import Market from "../Market";
+import Card from "../Card";
 
 const foods = [
   {
@@ -99,7 +100,7 @@ function Home({
   return (
     <div className="home-container">
       {showCart && (
-        <Orders
+        <Card
           handleDeleteFromCart={handleDeleteFromCart}
           handleLogaut={handleLogaut}
           handleQuantityDecrement={handleQuantityDecrement}
