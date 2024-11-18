@@ -58,7 +58,6 @@ function Payment() {
               <div className="payment-line"></div>
               <div className="payment-methon__items">
                 <div>
-                  {" "}
                   <h2 className="payment-method__order">Order Type</h2>
                   <select
                     className="payment-method__order-option"

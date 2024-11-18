@@ -10,7 +10,6 @@
 
 .payment_order {
   width: 100%;
-  height: 57.75rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -144,6 +143,8 @@
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 1);
   display: inline-block;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .payment-method__order-option {
@@ -158,16 +159,52 @@
 }
 
 .payment-method__table-text {
-  display: inline-block;
+  color: rgba(224, 230, 233, 1);
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
 }
 
 .payment-method__table-text input {
   width: 12.6rem;
   height: 3rem;
   padding: 1rem;
+  margin-top: 0.3rem;
   border-radius: 0.5rem;
   border: 1px solid rgba(57, 60, 73, 1);
   background: rgba(45, 48, 62, 1);
   color: rgba(224, 230, 233, 1);
   display: flex;
+}
+
+/* Footer Payment */
+
+.payment-footer {
+  margin-top: 18rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-footer__canel {
+  width: 12rem;
+  height: 3rem;
+  font-size: 1.125rem;
+  color: rgba(234, 124, 105, 1);
+  background: none;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(234, 124, 105, 1);
+}
+
+.payment-footer__confirm {
+  width: 12rem;
+  height: 3rem;
+  font-size: 1.125rem;
+  color: rgba(250, 250, 250, 1);
+  background: rgba(234, 124, 105, 1);
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(234, 124, 105, 1);
+  box-shadow: 0px 8px 24px 0px rgba(234, 124, 105, 0.3);
 }
