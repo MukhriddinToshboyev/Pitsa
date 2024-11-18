@@ -16,30 +16,20 @@ function Payment() {
         <section className="payment-section">
           <div className="payment-method">
             <h2 className="payment-method__text">Payment Method</h2>
-            <div>
-              <div className="credit-card">
-                <img
-                  src={PaymentCard}
-                  alt="icon"
-                  className="payment-method__img"
-                />
-                <p> Credit Card </p>
-              </div>
-              <div className="credit-card">
-                <img
-                  src={PaymentPaypal}
-                  alt="icon"
-                  className="payment-method__img"
-                />
-                <p> Paypal </p>
-              </div>
-              <div className="credit-card">
-                <img
-                  src={PaymentWallet}
-                  alt="icon"
-                  className="payment-method__img"
-                />
-                <p> Cash </p>
+            <div className="payment-method__item">
+              <div className="payment-method__card">
+                <div className="card">
+                  <img src={PaymentCard} alt="icon" className="card-img" />
+                  <p className="card-text"> Credit Card </p>
+                </div>
+                <div className="card">
+                  <img src={PaymentPaypal} alt="icon" className="card-img" />
+                  <p className="card-text"> Paypal </p>
+                </div>
+                <div className="card">
+                  <img src={PaymentWallet} alt="icon" className="card-img" />
+                  <p className="card-text"> Cash </p>
+                </div>
               </div>
               <form>
                 <label>
