@@ -31,29 +31,37 @@ function Payment() {
                   <p className="card-text"> Cash </p>
                 </div>
               </div>
-              <form>
-                <label>
+              <form className="payment-method__form">
+                <label className="form-name">
                   Cardholder Name
                   <input type="text" placeholder="Levi Ackerman" />
                 </label>
-                <label>
+                <label className="form-name">
                   Card Number
                   <input type="number" placeholder="2564 1421 0897 1244" />
                 </label>
-                <div className="payment-date-CVV">
-                  <label>
-                    Expiration Date
-                    <input type="date" placeholder="02/2022" />
-                  </label>
-                  <label>
-                    CVV
-                    <input type="cvc" placeholder="***" />
-                  </label>
+                <div className="form-method__date">
+                  <div>
+                    <label className="form-date">
+                      Expiration Date
+                      <input type="date" placeholder="02/2022" />
+                    </label>
+                  </div>
+                  <div>
+                    <label className="form-date">
+                      CVV
+                      <input type="cvc" placeholder="***" />
+                    </label>
+                  </div>
                 </div>
               </form>
               <div className="payment-line"></div>
-              <h2>Order Type</h2>
-              <select className="Payment-" id="country" name="country">
+              <h2 className="payment-method__order">Order Type</h2>
+              <select
+                className="payment-method__order-option"
+                id="country"
+                name="country"
+              >
                 <option value="australia">Dane In</option>
                 <option value="canada">Dane In</option>
                 <option value="usa">Dine In</option>

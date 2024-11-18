@@ -25,11 +25,13 @@
 }
 
 .payment-header__title {
+  padding-bottom: 1rem;
   font-size: 1.75rem;
   color: rgba(255, 255, 255, 1);
 }
 
 .payment-header__text {
+  padding-bottom: 0.2rem;
   color: rgba(171, 187, 194, 1);
 }
 
@@ -49,7 +51,13 @@
   color: rgba(255, 255, 255, 1);
 }
 
+.payment-method__item {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
 .payment-method__card {
+  margin-bottom: 1rem;
   display: flex;
   justify-content: flex-start;
 }
@@ -72,4 +80,66 @@
 
 .card-text {
   color: rgba(171, 187, 194, 1);
+}
+
+.payment-method__form {
+  /* width: 100%; */
+  /* display: flex; */
+}
+
+.form-name {
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-name input {
+  width: 100%;
+  height: 3rem;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(57, 60, 73, 1);
+  background: rgba(45, 48, 62, 1);
+}
+
+.form-method__date {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-date {
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
+}
+
+.payment-line {
+  margin-top: 1rem;
+  width: 26.3rem;
+  border: 1px solid rgba(57, 60, 73, 1);
+}
+
+.form-date input {
+  width: 12.7rem;
+  height: 3rem;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(57, 60, 73, 1);
+  background: rgba(45, 48, 62, 1);
+}
+
+.payment-method__order {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+.payment-method__order-option {
+  width: 12.6rem;
+  height: 3rem;
+  color: red;
 }
