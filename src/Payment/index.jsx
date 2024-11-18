@@ -56,22 +56,27 @@ function Payment() {
                 </div>
               </form>
               <div className="payment-line"></div>
-              <h2 className="payment-method__order">Order Type</h2>
-              <select
-                className="payment-method__order-option"
-                id="country"
-                name="country"
-              >
-                <option value="australia">Dane In</option>
-                <option value="canada">Dane In</option>
-                <option value="usa">Dine In</option>
-              </select>
-              <form action="action">
-                <label>
-                  Table no.
-                  <input type="text" placeholder="140" />
-                </label>
-              </form>
+              <div className="payment-methon__items">
+                <div>
+                  {" "}
+                  <h2 className="payment-method__order">Order Type</h2>
+                  <select
+                    className="payment-method__order-option"
+                    id="country"
+                    name="country"
+                  >
+                    <option value="australia">Dane In</option>
+                    <option value="canada">Dane In</option>
+                    <option value="usa">Dine In</option>
+                  </select>
+                </div>
+                <form className="payment-method__table" action="action">
+                  <label className="payment-method__table-text">
+                    Table no.
+                    <input type="text" placeholder="140" />
+                  </label>
+                </form>
+              </div>
             </div>
           </div>
         </section>

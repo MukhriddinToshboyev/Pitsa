@@ -98,6 +98,7 @@
 .form-name input {
   width: 100%;
   height: 3rem;
+  color: rgba(224, 230, 233, 1);
   margin-top: 0.5rem;
   padding-left: 1rem;
   border-radius: 0.5rem;
@@ -126,6 +127,7 @@
 .form-date input {
   width: 12.7rem;
   height: 3rem;
+  color: rgba(224, 230, 233, 1);
   margin-top: 0.5rem;
   padding-left: 1rem;
   border-radius: 0.5rem;
@@ -133,13 +135,39 @@
   background: rgba(45, 48, 62, 1);
 }
 
+.payment-methon__items {
+  display: flex;
+  justify-content: space-between;
+}
+
 .payment-method__order {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 1);
+  display: inline-block;
 }
 
 .payment-method__order-option {
   width: 12.6rem;
   height: 3rem;
-  color: red;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(57, 60, 73, 1);
+  background: rgba(31, 29, 43, 1);
+  color: rgba(224, 230, 233, 1);
+  display: flex;
+}
+
+.payment-method__table-text {
+  display: inline-block;
+}
+
+.payment-method__table-text input {
+  width: 12.6rem;
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(57, 60, 73, 1);
+  background: rgba(45, 48, 62, 1);
+  color: rgba(224, 230, 233, 1);
+  display: flex;
 }
