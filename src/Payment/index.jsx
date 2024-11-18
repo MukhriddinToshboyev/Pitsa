@@ -3,8 +3,12 @@ import "./Payment.css";
 import PaymentCard from "../assets/Payment-Card.svg";
 import PaymentPaypal from "../assets/Payment-Paypal.svg";
 import PaymentWallet from "../assets/Payment-Wallet.svg";
+import PaymentCheckmark from "../assets/Payment-checkmark-circle.svg";
+import { useState } from "react";
 
 function Payment() {
+  const [card, setCard] = useState("credit-card");
+
   return (
     <div className="payment-container">
       <div className="payment_order">
@@ -18,15 +22,39 @@ function Payment() {
             <h2 className="payment-method__text">Payment Method</h2>
             <div className="payment-method__item">
               <div className="payment-method__card">
-                <div className="card">
+                {/* <h1
+              onClick={() => setActiveTitle("hot-dishes")}
+              className={`home-navigation__text ${
+                activeTitle === "hot-dishes" ? "active" : ""
+              }`}
+            >
+              Hot Dishes
+            </h1> */}
+                <div
+                  onClick={() => setCard("credit-card")}
+                  className={`card  ${
+                    card === "credit-card" ? "card-active" : ""
+                  }`}
+                >
+                  <img
+                    src={PaymentCheckmark}
+                    alt="icon"
+                    className="card-icon"
+                  />
                   <img src={PaymentCard} alt="icon" className="card-img" />
                   <p className="card-text"> Credit Card </p>
                 </div>
-                <div className="card">
+                <div
+                  onClick={() => setCard("paypal")}
+                  className={`card  ${card === "paypal" ? "card-active" : ""}`}
+                >
                   <img src={PaymentPaypal} alt="icon" className="card-img" />
                   <p className="card-text"> Paypal </p>
                 </div>
-                <div className="card">
+                <div
+                  onClick={() => setCard("cash")}
+                  className={`card  ${card === "cash" ? "card-active" : ""}`}
+                >
                   <img src={PaymentWallet} alt="icon" className="card-img" />
                   <p className="card-text"> Cash </p>
                 </div>
