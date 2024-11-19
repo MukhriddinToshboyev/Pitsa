@@ -22,14 +22,6 @@ function Payment() {
             <h2 className="payment-method__text">Payment Method</h2>
             <div className="payment-method__item">
               <div className="payment-method__card">
-                {/* <h1
-              onClick={() => setActiveTitle("hot-dishes")}
-              className={`home-navigation__text ${
-                activeTitle === "hot-dishes" ? "active" : ""
-              }`}
-            >
-              Hot Dishes
-            </h1> */}
                 <div
                   onClick={() => setCard("credit-card")}
                   className={`card  ${

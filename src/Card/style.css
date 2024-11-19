@@ -61,19 +61,20 @@
   justify-content: space-between;
 }
 
-.card-header_dine {
-  width: 4.1rem;
-  border-radius: 0.5rem;
-  border: 0.1rem solid rgba(234, 124, 105, 1);
-  background: rgba(234, 124, 105, 1);
-  color: rgba(255, 255, 255, 1);
-}
 .card-header_button {
+  cursor: pointer;
   width: 4.1rem;
+  height: 2rem;
   border-radius: 0.5rem;
   border: 0.1rem solid rgba(57, 60, 73, 1);
   background: rgba(31, 29, 43, 1);
   color: rgba(234, 124, 105, 1);
+}
+
+.dine {
+  border: 0.1rem solid rgba(234, 124, 105, 1);
+  background: rgba(234, 124, 105, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .card-header__item {

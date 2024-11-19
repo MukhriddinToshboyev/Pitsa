@@ -13,7 +13,9 @@ function Card({
   cartItems1,
   handleLogaut,
 }) {
-  const [subTotal, setSubTotal] = useState(0);
+  const [subTotal, setSubTotal] = useState(0); //sub totalni hisoblash
+  const [click, setClick] = useState(); //payment cardga o'tish
+  const [cardItem, setCardItem] = useState("dine-in"); //  classni o'zgartirish
 
   useEffect(() => {
     // Sub total ni hisoblash
@@ -26,6 +28,7 @@ function Card({
 
   return (
     <div className="card-container">
+      {click && <Payment />}
       {cartItems1?.length ? (
         <div className="card-orders">
           <header className="card-header">
@@ -36,9 +39,34 @@ function Card({
               <h1 className="card-header__text">Orders #34562</h1>
             </div>
             <div className="card-header__title">
-              <button className="card-header_dine">Dine In</button>
-              <button className="card-header_button">To Go</button>
-              <button className="card-header_button">Delivery</button>
+              {/* onClick={() => setCard("credit-card")}
+                  className={`card  ${
+                    card === "credit-card" ? "card-active" : ""
+                  }`} */}
+              <button
+                onClick={() => setCardItem("dine-in")}
+                className={`card-header_button ${
+                  cardItem === "dine-in" ? "dine" : ""
+                }`}
+              >
+                Dine In
+              </button>
+              <button
+                onClick={() => setCardItem("to-go")}
+                className={`card-header_button ${
+                  cardItem === "to-go" ? "dine" : ""
+                }`}
+              >
+                To Go
+              </button>
+              <button
+                onClick={() => setCardItem("delivery")}
+                className={`card-header_button ${
+                  cardItem === "delivery" ? "dine" : ""
+                }`}
+              >
+                Delivery
+              </button>
             </div>
             <div className="card-header__item">
               <h1 className="card-header__item-text">Item</h1>
@@ -117,11 +145,16 @@ function Card({
             </div>
           </section>
           <footer className="card-footer">
-            <button className="card-footer__button">To Order</button>
+            <button
+              onClick={() => setClick(true)}
+              className="card-footer__button"
+            >
+              To Order
+            </button>
           </footer>
         </div>
       ) : (
-        <Payment />
+        <Market />
       )}
     </div>
   );
