@@ -11,6 +11,7 @@ import { useState } from "react";
 import Card from "../Card";
 import Sidebar from "../Sidebar";
 import Account from "../Account";
+import Menu from "../Menu";
 
 const foods = [
   {
@@ -81,9 +82,15 @@ function Home({
 }) {
   const [activeTitle, setActiveTitle] = useState("hot-dishes");
 
+  const [menuActive, setMenuActive] = useState(false);
+
   const [showCart, setShowCart] = useState(false);
 
   const [account, setAccount] = useState(false);
+
+  const handleMenuCart = () => {
+    setMenuActive(!menuActive);
+  };
 
   const handleHSHowCart = () => {
     setShowCart(!showCart);
@@ -98,6 +105,7 @@ function Home({
   };
   return (
     <div className="home-container">
+      {menuActive && <Menu />}
       {account && <Account />}
       {showCart && (
         <Card
@@ -110,6 +118,7 @@ function Home({
       )}
       <Sidebar
         cartLength={cartLength}
+        handleMenuCart={handleMenuCart}
         handleHSHowCart={handleHSHowCart}
         handleAccountCard={handleAccountCard}
       />

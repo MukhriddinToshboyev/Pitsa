@@ -10,13 +10,16 @@ import SidebarIcon7 from "../assets/Sidebar-cart-outline 2.svg";
 import SidebarIcon8 from "../assets/Sidebar-icons8_account_48px_2 1.svg";
 import { useState } from "react";
 
-function Sidebar({ handleHSHowCart, handleAccountCard, cartLength }) {
-  // const [sidebarActive, setSidebarActive] = useState("");
-
+function Sidebar({
+  handleHSHowCart,
+  handleAccountCard,
+  handleMenuCart,
+  cartLength,
+}) {
   return (
     <div className="sidebar-container">
       <ul className="sidebar-menu">
-        <li className="sidebar-menu__item">
+        <li onClick={handleMenuCart} className="sidebar-menu__item">
           <a href="#icon1" className="sidebar-menu__link">
             <img src={SidebarIcon1} alt="icon1" className="icon" />
           </a>
