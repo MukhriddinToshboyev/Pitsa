@@ -60,16 +60,16 @@ function Information() {
             </li>
             <div className="information-navigation__item">
               <ul className="information-navigation__group">
-                <li className="information-navigation__group-icon">
+                <li>
                   <img src={InformationIcon5} alt="icon" />
                 </li>
-                <li className="information-navigation__group-icon">
+                <li>
                   <img src={InformationIcon6} alt="icon" />
                 </li>
-                <li className="information-navigation__group-icon">
+                <li>
                   <img src={InformationIcon7} alt="icon" />
                 </li>
-                <li className="information-navigation__group-icon">
+                <li>
                   <img src={InformationIcon8} alt="icon" />
                 </li>
               </ul>
