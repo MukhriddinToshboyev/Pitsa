@@ -4,13 +4,14 @@ import MenuIcon1 from "../assets/Menu-icons8_info_64px 1.svg";
 import MenuIcon2 from "../assets/Menu-icons8_Earth_Globe_32px 1.svg";
 import MenuIcon3 from "../assets/Menu-icons8_clock_100px 1 (1).svg";
 import { useState } from "react";
+import Information from "./Information";
 
 function Menu() {
   const [information, setInformation] = useState(false);
 
   return (
     <div className="menu-container">
-      {/* {information && } */}
+      {information && <Information />}
       <div className="menu-function">
         <header className="menu-header">
           <h2 className="menu-header__text"> Functions</h2>
