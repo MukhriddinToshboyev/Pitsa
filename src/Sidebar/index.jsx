@@ -1,13 +1,13 @@
 import "./Sidebar.css";
 
-import SidebarIcon1 from "../assets/icons1_Menu.png";
-import SidebarIcon2 from "../assets/icons2-Home.png";
-import SidebarIcon3 from "../assets/icons3-Discount.png";
-import SidebarIcon4 from "../assets/icons4-Graph.png";
-import SidebarIcon5 from "../assets/icons5-Message.png";
-import SidebarIcon6 from "../assets/isons6-Notification.png";
-import SidebarIcon7 from "../assets/icons7-cart-outline.png";
-import SidebarIcon8 from "../assets/icons8_account.png";
+import SidebarIcon1 from "../assets/Sidebar-icons8_Menu_48px 1.svg";
+import SidebarIcon2 from "../assets/Sidebar-Group 4730266.svg";
+import SidebarIcon3 from "../assets/Sidebar-Discount.svg";
+import SidebarIcon4 from "../assets/Sidebar-Vector.svg";
+import SidebarIcon5 from "../assets/Sidebar-Message.svg";
+import SidebarIcon6 from "../assets/Sidebar-Notification.svg";
+import SidebarIcon7 from "../assets/Sidebar-cart-outline 2.svg";
+import SidebarIcon8 from "../assets/Sidebar-icons8_account_48px_2 1.svg";
 
 function Sidebar({ handleHSHowCart, handleAccountCard, cartLength }) {
   return (
