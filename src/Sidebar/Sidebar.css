@@ -22,7 +22,7 @@
 .sidebar-home__icon {
   width: 3.375rem;
   height: 3.375rem;
-  background: #ea7c69;
+  /* background: #ea7c69; */
   display: flex;
   align-items: center;
   justify-content: center;

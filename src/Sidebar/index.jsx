@@ -14,9 +14,7 @@ function Sidebar({ handleHSHowCart, handleAccountCard, cartLength }) {
     <div className="sidebar-container">
       <img src={SidebarIcon1} alt="img" className="icon" />
       <div className="sidebar-home">
-        <div className="sidebar-home__icon">
-          <img src={SidebarIcon2} alt="img" className="icon" />
-        </div>
+        <div className="sidebar-home__icon"></div>
       </div>
       <img src={SidebarIcon3} alt="img" className="icon" />
       <img src={SidebarIcon4} alt="img" className="icon" />
