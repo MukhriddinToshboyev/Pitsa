@@ -5,7 +5,7 @@ function Information() {
     <div className="information-container">
       <div className="information-function">
         <header className="information-header">
-          <h2 className="information-header__text"> Functions</h2>
+          <h2 className="information-header__text"> Information</h2>
         </header>
         <nav className="information-navigation">
           <ul className="information-navigation__items">
