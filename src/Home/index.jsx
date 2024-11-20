@@ -10,6 +10,7 @@ import HomeIcon1 from "../assets/Market-icons8_search_50px 1 (2).svg";
 import { useState } from "react";
 import Card from "../Card";
 import Sidebar from "../Sidebar";
+import Account from "../Account";
 
 const foods = [
   {
@@ -82,14 +83,22 @@ function Home({
 
   const [showCart, setShowCart] = useState(false);
 
+  const [account, setAccount] = useState(false);
+
   const handleHSHowCart = () => {
     setShowCart(!showCart);
   };
+
+  const handleAccountCard = () => {
+    setAccount(!account);
+  };
+
   const handleLogaut = () => {
     setShowCart(false);
   };
   return (
     <div className="home-container">
+      {account && <Account />}
       {showCart && (
         <Card
           handleDeleteFromCart={handleDeleteFromCart}
@@ -99,8 +108,11 @@ function Home({
           cartItems1={cartItems1}
         />
       )}
-
-      <Sidebar cartLength={cartLength} handleHSHowCart={handleHSHowCart} />
+      <Sidebar
+        cartLength={cartLength}
+        handleHSHowCart={handleHSHowCart}
+        handleAccountCard={handleAccountCard}
+      />
 
       <div className="home-discreption">
         <header className="home-header">

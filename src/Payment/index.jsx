@@ -6,6 +6,8 @@ import PaymentWallet from "../assets/Payment-Wallet.svg";
 import PaymentCheckmark from "../assets/Payment-checkmark-circle.svg";
 import { useState } from "react";
 
+const PAYMENT_OPTIONS = ["Credit Card", "Paypal", "Cash"];
+
 function Payment() {
   const [card, setCard] = useState("credit-card");
 
@@ -22,6 +24,22 @@ function Payment() {
             <h2 className="payment-method__text">Payment Method</h2>
             <div className="payment-method__item">
               <div className="payment-method__card">
+                {/* {PAYMENT_OPTIONS.map((item) => {
+                  <div
+                    onClick={() => setCard("credit-card")}
+                    className={`card  ${
+                      card === "credit-card" ? "card-active" : ""
+                    }`}
+                  >
+                    <img
+                      src={PaymentCheckmark}
+                      alt="icon"
+                      className="card-icon"
+                    />
+                    <img src={PaymentCard} alt="icon" className="card-img" />
+                    <p className="card-text">{item}</p>
+                  </div>;
+                })} */}
                 <div
                   onClick={() => setCard("credit-card")}
                   className={`card  ${

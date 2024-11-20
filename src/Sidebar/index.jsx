@@ -9,7 +9,7 @@ import SidebarIcon6 from "../assets/isons6-Notification.png";
 import SidebarIcon7 from "../assets/icons7-cart-outline.png";
 import SidebarIcon8 from "../assets/icons8_account.png";
 
-function Sidebar({ handleHSHowCart, cartLength }) {
+function Sidebar({ handleHSHowCart, handleAccountCard, cartLength }) {
   return (
     <div className="sidebar-container">
       <img src={SidebarIcon1} alt="img" className="icon" />
@@ -28,7 +28,11 @@ function Sidebar({ handleHSHowCart, cartLength }) {
         </button>
         {cartLength > 0 && <span className="cart-count">{cartLength}</span>}
       </div>
-      <img src={SidebarIcon8} alt="img" className="icon" />
+      <div className="sidebar-market">
+        <button onClick={handleAccountCard} className="sidebar-market__button">
+          <img src={SidebarIcon8} alt="img" className="icon" />
+        </button>
+      </div>
     </div>
   );
 }

@@ -82,6 +82,7 @@
 .card-icon {
   position: absolute;
   right: 0.7rem;
+  color: red;
 }
 
 .card-img {
