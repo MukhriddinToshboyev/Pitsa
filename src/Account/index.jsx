@@ -2,12 +2,14 @@ import "./Account.css";
 
 import AccountIcon from "../assets/Account-icons8_clock_100px 1.svg";
 import { useState } from "react";
+import AccountHistory from "./AccountHistory";
 
 function Account() {
-  const [card, setCard] = useState("credit-card");
+  const [card, setCard] = useState(false);
 
   return (
     <div className="account-container">
+      {card && <AccountHistory />}
       <div className="account-order">
         <header className="account-header">
           <h2 className="account-header__text">Profil</h2>
@@ -23,7 +25,7 @@ function Account() {
             <h2 className="account-navigation__text">Edit profile</h2>
           </div>
         </nav>
-        <section className="account-section">
+        <section onClick={() => setCard(true)} className="account-section">
           <img src={AccountIcon} alt="" className="account-section__icon" />
           <h2 className="account-section__text">Order history</h2>
         </section>

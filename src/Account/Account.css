@@ -75,6 +75,7 @@
 
 /* Account Section */
 .account-section {
+  cursor: pointer;
   width: 27.5rem;
   height: 5.5rem;
   margin-top: 1.875rem;

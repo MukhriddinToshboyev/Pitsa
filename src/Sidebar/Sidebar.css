@@ -19,25 +19,6 @@
   align-items: center;
 }
 
-/* .sidebar-menu__item {
-  width: 6rem;
-  height: 6rem;
-  background: #252836;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-} */
-
-/* .sidebar-menu__link {
-  width: 3.375rem;
-  height: 3.375rem;
-  background: #ea7c69;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1rem;
-  box-shadow: 0px 8px 24px 0px #ea7c6952;
-} */
-
 .circle {
   fill: rgba(255, 255, 255, 1); /* SVG ichki rangi */
   stroke: rgba(255, 255, 255, 1); /* Chiziq rangi */
@@ -63,7 +44,6 @@
 }
 
 .sidebar-menu {
-  /* Har bir element orasidagi masofa */
 }
 
 .sidebar-menu__item {
