@@ -24,11 +24,6 @@
   position: relative;
 }
 
-.home-header__icon {
-  position: absolute;
-  right: 20rem;
-}
-
 .home-resto {
   display: flex;
   flex-direction: column;
@@ -50,6 +45,7 @@
 }
 
 .home-search {
+  position: relative;
   width: 23rem;
   height: 3.4rem;
 }
@@ -62,6 +58,12 @@
   background: #393c49;
   border: 2rem;
   border-radius: 0.5rem;
+}
+
+.home-header__icon {
+  position: absolute;
+  right: 20rem;
+  top: 1rem;
 }
 
 /* Home navigation */

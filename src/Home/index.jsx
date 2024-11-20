@@ -116,9 +116,6 @@ function Home({
 
       <div className="home-discreption">
         <header className="home-header">
-          <div className="home-header__icon">
-            <img src={HomeIcon1} alt="icon" />
-          </div>
           <div className="home-resto">
             <h1 className="home-resto__name">Jaegar Resto</h1>
             <p className="home-resto__date">Tuesday, 2 Feb 2021</p>
@@ -129,6 +126,7 @@ function Home({
               tabIndex={Text}
               placeholder="Search for food, coffe, etc.."
             />
+            <img src={HomeIcon1} className="home-header__icon" />
           </form>
         </header>
         <nav className="home-navigation">
