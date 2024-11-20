@@ -1,5 +1,6 @@
 .sidebar-container {
   width: 6.25rem;
+  height: 64rem;
   background: #1f1d2b;
   display: flex;
   z-index: 3;
@@ -8,35 +9,39 @@
   align-items: center;
 }
 
-.sidebar-home {
+.sidebar-menu {
+  height: 64rem;
+  width: 6rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* .sidebar-menu__item {
   width: 6rem;
   height: 6rem;
   background: #252836;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+} */
 
-.sidebar-home__icon {
+/* .sidebar-menu__link {
   width: 3.375rem;
   height: 3.375rem;
-  /* background: #ea7c69; */
+  background: #ea7c69;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 1rem;
   box-shadow: 0px 8px 24px 0px #ea7c6952;
-}
+} */
 
-.icon {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.sidebar-market {
-  display: flex;
+.circle {
+  fill: rgba(255, 255, 255, 1); /* SVG ichki rangi */
+  stroke: rgba(255, 255, 255, 1); /* Chiziq rangi */
+  stroke-width: 0px; /* Chiziq qalinligi */
 }
 
 .sidebar-market__button {
@@ -55,4 +60,35 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.sidebar-menu {
+  /* Har bir element orasidagi masofa */
+}
+
+.sidebar-menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+.sidebar-menu__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 5px;
 }
