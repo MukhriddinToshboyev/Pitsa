@@ -2,7 +2,6 @@ import "./Sidebar.css";
 
 import SidebarIcon1 from "../assets/Sidebar-icons8_Menu_48px 1 (1).svg";
 import SidebarIcon7 from "../assets/Sidebar-cart-outline 2.svg";
-import SidebarIcon8 from "../assets/Sidebar-icons8_account_48px_2 1.svg";
 import { useState } from "react";
 
 function Sidebar({
@@ -27,7 +26,36 @@ function Sidebar({
               className={activeSidebar === "menu" ? "sidebar-menu__link" : ""}
               href="#icon1"
             >
-              <img src={SidebarIcon1} alt="icon1" className="icon" />
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+                className={activeSidebar === "menu" ? "colored-icon" : ""}
+              >
+                <rect width="24" height="24" fill="url(#pattern0_55_4760)" />
+                <defs>
+                  <pattern
+                    id="pattern0_55_4760"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlinkHref="#image0_55_4760"
+                      transform="scale(0.0208333)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_55_4760"
+                    width="48"
+                    height="48"
+                    xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAA+ElEQVRYCe3YMQ6CQBAF0BmFK3AB9Sz2Vnb2JFrZWJiQWNhYaULvBaw9jCewtWTN+LUgG6clYY2f7MBCNvD3bbNBhAcFKEABClDghwX0O/t9W+7FbI3nGSqlFkT1UOzqTRxqEN98+mYrXFMLj0iSAXb57sTlJ6B6xICASq09sAKn1EIxDwUoQAEKUOC/BfxmrirH8rSFmORJ0ag0MtRzUdW3OJfftAW7YsAIlVYzxGlsjvME1Ta/mTNxq9KO7rujPptfgVyn1shM1ZKaiBkC5XLp25DfpwAFKEABClAgFnDbBf5ajHm67fPXYreefBsFKEABClCgA4EXWNU3n/P/JRYAAAAASUVORK5CYII="
+                  />
+                </defs>
+              </svg>
             </a>
           </li>
         </div>
@@ -172,7 +200,49 @@ function Sidebar({
             href="#cart"
           >
             <button onClick={handleHSHowCart} className="sidebar-menu__button">
-              <img src={SidebarIcon7} alt="cart" className="icon" />
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className={
+                  activeSidebar === "card-outline" ? "colored-icon" : ""
+                }
+              >
+                <g clip-path="url(#clip0_36_2893)">
+                  <path
+                    d="M8.30793 23.0769C8.81778 23.0769 9.2311 22.6636 9.2311 22.1538C9.2311 21.644 8.81778 21.2307 8.30793 21.2307C7.79808 21.2307 7.38477 21.644 7.38477 22.1538C7.38477 22.6636 7.79808 23.0769 8.30793 23.0769Z"
+                    stroke="#EA7C69"
+                  />
+                  <path
+                    d="M20.3079 23.0769C20.8178 23.0769 21.2311 22.6636 21.2311 22.1538C21.2311 21.644 20.8178 21.2307 20.3079 21.2307C19.7981 21.2307 19.3848 21.644 19.3848 22.1538C19.3848 22.6636 19.7981 23.0769 20.3079 23.0769Z"
+                    stroke="#EA7C69"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M0.92334 0.923096H4.45511L7.10394 18.4616H21.231"
+                    stroke="#EA7C69"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7.30209 13.8461H21.0487C21.1506 13.8462 21.2495 13.8056 21.3284 13.7312C21.4072 13.6568 21.4613 13.5532 21.4813 13.4381L23.0685 4.29959C23.0813 4.2259 23.0797 4.14986 23.0639 4.07695C23.0481 4.00403 23.0184 3.93608 22.977 3.87797C22.9356 3.81987 22.8836 3.77307 22.8246 3.74096C22.7656 3.70884 22.7011 3.69221 22.6358 3.69226H5.53857"
+                    stroke="#EA7C69"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_36_2893">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
               {cartLength > 0 && (
                 <span className="cart-count">{cartLength}</span>
               )}
@@ -200,6 +270,7 @@ function Sidebar({
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
+                className={activeSidebar === "account" ? "colored-icon" : ""}
               >
                 <rect width="24" height="24" fill="url(#pattern0_55_4761)" />
                 <defs>

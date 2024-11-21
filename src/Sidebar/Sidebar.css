@@ -55,6 +55,10 @@
   stroke-width: 0px; /* Chiziq qalinligi */
 }
 
+.colored-icon {
+  filter: brightness(0) invert(1);
+}
+
 .icon {
   width: 1.5rem;
   height: 1.5rem;

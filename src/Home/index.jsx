@@ -73,10 +73,9 @@ const foods = [
 ];
 
 function Home({
-  handleDeleteFromCart,
   handleAddToCart,
   cartLength,
-  cartItems1,
+  cart,
   handleQuantityDecrement,
   handleQuantityIncrement,
 }) {
@@ -109,11 +108,10 @@ function Home({
       {account && <Account />}
       {showCart && (
         <Card
-          handleDeleteFromCart={handleDeleteFromCart}
           handleLogaut={handleLogaut}
           handleQuantityDecrement={handleQuantityDecrement}
           handleQuantityIncrement={handleQuantityIncrement}
-          cartItems1={cartItems1}
+          cart={cart}
         />
       )}
       <Sidebar

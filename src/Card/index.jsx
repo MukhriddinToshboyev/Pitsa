@@ -7,29 +7,30 @@ import Market from "../Market";
 import Payment from "../Payment";
 
 function Card({
-  handleDeleteFromCart,
   handleQuantityDecrement,
   handleQuantityIncrement,
-  cartItems1,
+  cart,
   handleLogaut,
 }) {
   const [subTotal, setSubTotal] = useState(0); //sub totalni hisoblash
+
   const [click, setClick] = useState(); //payment cardga o'tish
+
   const [cardItem, setCardItem] = useState("dine-in"); //  classni o'zgartirish
 
   useEffect(() => {
     // Sub total ni hisoblash
-    const total = cartItems1.reduce(
+    const total = cart.reduce(
       (acc, item) => acc + item.price * item.quantity,
       0
     );
     setSubTotal(total);
-  }, [cartItems1]);
+  }, [cart]);
 
   return (
     <div className="card-container">
       {click && <Payment />}
-      {cartItems1?.length ? (
+      {cart?.length ? (
         <div className="card-orders">
           <header className="card-header">
             <div className="card-header__number">
@@ -79,7 +80,7 @@ function Card({
           </header>
           <section className="card-section">
             <div className="card-items">
-              {cartItems1?.map((food) => (
+              {cart?.map((food) => (
                 <div key={food.id} className="card-item">
                   <div className="card-item__card">
                     <div>
@@ -123,10 +124,7 @@ function Card({
                         placeholder="Please, just a little bit spicy only."
                       />
                     </form>
-                    <button
-                      onClick={() => handleDeleteFromCart(food)}
-                      className="card-section__delet"
-                    >
+                    <button className="card-section__delet">
                       <img src={CardIcon2} alt="icon" />
                     </button>
                   </div>
