@@ -16,24 +16,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.sidebar-menu__items {
+  width: 6rem;
+  height: 6.5rem;
+  display: flex;
+  justify-content: center;
   align-items: center;
-}
-
-.circle {
-  fill: rgba(255, 255, 255, 1); /* SVG ichki rangi */
-  stroke: rgba(255, 255, 255, 1); /* Chiziq rangi */
-  stroke-width: 0px; /* Chiziq qalinligi */
-}
-
-.sidebar-market__button {
-  background: #1f1d2b;
-  border: 1px solid #1f1d2b;
-  cursor: pointer;
 }
 
 .sidebar-menu__item {
   width: 6rem;
   height: 6.5rem;
+  padding: 1rem;
   background: rgba(37, 40, 54, 1);
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -53,10 +49,17 @@
   justify-content: center;
 }
 
+.circle {
+  fill: rgba(255, 255, 255, 1); /* SVG ichki rangi */
+  stroke: rgba(255, 255, 255, 1); /* Chiziq rangi */
+  stroke-width: 0px; /* Chiziq qalinligi */
+}
+
 .icon {
   width: 1.5rem;
   height: 1.5rem;
 }
+
 .sidebar-menu__button {
   background: none;
   border: none;
@@ -76,4 +79,10 @@
   padding: 0.3rem;
   display: flex;
   align-items: center;
+}
+
+.sidebar-market__button {
+  background: #1f1d2b;
+  border: 1px solid #1f1d2b;
+  cursor: pointer;
 }
