@@ -20,6 +20,7 @@ const foods = [
     price: 2.29,
     bowls: 20,
     image: HomeImage1,
+    category: "hod dishes",
   },
   {
     id: 2,
@@ -137,56 +138,56 @@ function Home({
           </form>
         </header>
         <nav className="home-navigation">
-          <div className="home-navigation-items">
-            <h1
+          <ul className="home-navigation-items">
+            <li
               onClick={() => setActiveTitle("hot-dishes")}
               className={`home-navigation__text ${
                 activeTitle === "hot-dishes" ? "active" : ""
               }`}
             >
               Hot Dishes
-            </h1>
-            <h1
+            </li>
+            <li
               onClick={() => setActiveTitle("cold-dishes")}
               className={`home-navigation__text ${
                 activeTitle === "cold-dishes" ? "active" : ""
               }`}
             >
               Cold Dishes
-            </h1>
-            <h1
+            </li>
+            <li
               onClick={() => setActiveTitle("soup")}
               className={`home-navigation__text ${
                 activeTitle === "soup" ? "active" : ""
               }`}
             >
               Soup
-            </h1>
-            <h1
+            </li>
+            <li
               onClick={() => setActiveTitle("grill")}
               className={`home-navigation__text ${
                 activeTitle === "grill" ? "active" : ""
               }`}
             >
               Grill
-            </h1>
-            <h1
+            </li>
+            <li
               onClick={() => setActiveTitle("appetizer")}
               className={`home-navigation__text ${
                 activeTitle === "appetizer" ? "active" : ""
               }`}
             >
               Appetizer
-            </h1>
-            <h1
+            </li>
+            <li
               onClick={() => setActiveTitle("dessert")}
               className={`home-navigation__text ${
                 activeTitle === "dessert" ? "active" : ""
               }`}
             >
               Dessert
-            </h1>
-          </div>
+            </li>
+          </ul>
 
           <div className="home-navigation__choose">
             <p className="home-navigation__prise">Choose Dishes</p>
