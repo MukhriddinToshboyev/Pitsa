@@ -29,31 +29,6 @@ function App() {
     });
   }
 
-  // const handleAddToCart = (newItem) => {
-  //   setCart((prevItems) => {
-  //     const existingItem = prevItems.find((item) => item.id === newItem.id);
-
-  //     if (existingItem) {
-  //       // Agar element allaqachon mavjud bo'lsa, sonini oshiramiz
-  //       return prevItems.map((item) =>
-  //         item.id === newItem.id
-  //           ? { ...item, quantity: item.quantity + 1 }
-  //           : item
-  //       );
-  //     } else {
-  //       // Agar element yangi bo'lsa, uni qo'shamiz
-  //       return [...prevItems, { ...newItem, quantity: 1 }];
-  //     }
-  //   });
-  // };
-
-  // localStorage dagi ma'lumotlarni o'chirish tugmasi
-  // function handleDeleteFromCart(order) {
-  //   const filteredData = cart.filter((item) => item.id !== order.id);
-  //   setCart(filteredData);
-  //   localStorage.setItem("cart", JSON.stringify(filteredData));
-  // }
-
   // card elementlar sonini oshirish
   const handleQuantityIncrement = (obj) => {
     if (obj.quantity === 10) {
