@@ -103,6 +103,7 @@ function Home({
   const handleLogaut = () => {
     setShowCart(false);
   };
+
   return (
     <div className="home-container">
       {menuActive && <Menu />}

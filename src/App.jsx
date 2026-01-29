@@ -15,7 +15,7 @@ function App() {
         return prevItems.map((item) =>
           item.id === newItem.id
             ? { ...item, quantity: item.quantity + 1 }
-            : item
+            : item,
         );
       } else {
         // Agar element yangi bo'lsa, uni qo'shamiz
